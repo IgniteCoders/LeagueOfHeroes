@@ -1,6 +1,5 @@
-package com.example.leagueofheroes
+package com.example.leagueofheroes.data
 
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 
