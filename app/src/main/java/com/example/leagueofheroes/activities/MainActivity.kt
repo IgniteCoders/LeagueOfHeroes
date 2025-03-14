@@ -1,8 +1,10 @@
 package com.example.leagueofheroes.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -42,7 +44,13 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
 
-        adapter = SuperheroAdapter(superheroList)
+        adapter = SuperheroAdapter(superheroList) { position ->
+            val superhero = superheroList[position]
+
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("SUPERHERO_ID", superhero.id)
+            startActivity(intent)
+        }
 
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(this, 2)
