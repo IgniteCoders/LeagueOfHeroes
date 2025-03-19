@@ -6,4 +6,10 @@
 
     <color name="text_background">#985A5A5A</color>
 
+
+
+    <color name="alignment_color_good">#4CAF50</color>
+    <color name="alignment_color_bad">#F44336</color>
+    <color name="alignment_color_neutral">#4C8B94</color>
+
 </resources>
